@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Solar System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="ui-container">
+        <h1>Interactive Solar System</h1>
+        <p>Use your mouse/touch to rotate and zoom, or use hand gestures via webcam!</p>
+        <ul class="instructions">
+            <li>🖐️ <strong>Open Hand & Move:</strong> Rotate the solar system</li>
+            <li>🤏 <strong>Pinch & Move Up/Down:</strong> Zoom in and out</li>
+        </ul>
+        <div id="status">Loading libraries...</div>
+        <button id="start-webcam">Enable Hand Gestures</button>
+    </div>
+    
+    <video id="input_video" style="display:none;"></video>
+    <canvas id="output_canvas" style="position: absolute; bottom: 20px; right: 20px; width: 320px; height: 240px; border-radius: 8px; z-index: 10; border: 2px solid rgba(255,255,255,0.2); pointer-events: none; display: none; background: rgba(0,0,0,0.5);"></canvas>
+    
+    <script src="script.js"></script>
+</body>
+</html>

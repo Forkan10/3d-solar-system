@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#ui-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(10, 15, 30, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+    max-width: 350px;
+    pointer-events: none; /* Let clicks pass through if not on button */
+}
+
+#ui-container h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(#4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#ui-container p {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.instructions {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+}
+
+#status {
+    font-size: 0.85rem;
+    color: #ff9800;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#start-webcam {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+    pointer-events: auto; /* Re-enable pointer events for button */
+    width: 100%;
+}
+
+#start-webcam:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+}
+
+#start-webcam:active {
+    transform: translateY(0);
+}
